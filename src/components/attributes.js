@@ -1,0 +1,23 @@
+const lo=[{
+    "title": "Simple header",
+    "category": "headers",
+    "author": "rtivital",
+    "withColor": true,
+    "responsive": true,
+    "dependencies": ["/core/app-shell/", "/core/container/", "/core/group/", "/core/burger/"],
+    "props": {
+      "links": [
+        { "link": "/about", "label": "Features" },
+        { "link": "/pricing", "label": "Pricing" },
+        { "link": "/learn", "label": "Learn" },
+        { "link": "/community", "label": "Community" }
+      ]
+    },
+    "canvas": {
+      "center": false
+    },
+    "label": "Simple header",
+  }
+]
+
+export default lo;

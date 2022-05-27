@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   ThemeIcon,
   Text,
@@ -7,10 +7,10 @@ import {
   SimpleGrid,
   useMantineTheme,
   createStyles,
-} from '@mantine/core';
-import { Icon as TablerIcon } from 'tabler-icons-react';
-import { MOCKDATA } from './mockdata.js';
-import lo from './attributes.js'; 
+} from "@mantine/core";
+import { Icon as TablerIcon } from "tabler-icons-react";
+import { MOCKDATA } from "./mockdata.js";
+import lo from "./attributes.js";
 
 interface FeatureProps {
   icon: TablerIcon;
@@ -18,16 +18,21 @@ interface FeatureProps {
   description: React.ReactNode;
 }
 
-
-export function Feature({ icon: Icon, title=lo[1].props.title, description }: FeatureProps) {
-    const theme = useMantineTheme();
+export function Feature({
+  icon: Icon,
+  title = lo[1].props.title,
+  description,
+}: FeatureProps) {
+  const theme = useMantineTheme();
 
   return (
     <div>
       <ThemeIcon variant="light" size={40} radius={40}>
         <Icon style={{ width: 20, height: 20 }} />
       </ThemeIcon>
-      <Text style={{ marginTop: theme.spacing.sm, marginBottom: 7 }}>{title}</Text>
+      <Text style={{ marginTop: theme.spacing.sm, marginBottom: 7 }}>
+        {title}
+      </Text>
       <Text size="sm" color="dimmed" style={{ lineHeight: 1.6 }}>
         {description}
       </Text>
@@ -45,19 +50,19 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 900,
     marginBottom: theme.spacing.md,
-    textAlign: 'center',
+    textAlign: "center",
 
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan("sm")]: {
       fontSize: 28,
-      textAlign: 'left',
+      textAlign: "left",
     },
   },
 
   description: {
-    textAlign: 'center',
+    textAlign: "center",
 
-    [theme.fn.smallerThan('sm')]: {
-      textAlign: 'left',
+    [theme.fn.smallerThan("sm")]: {
+      textAlign: "left",
     },
   },
 }));
@@ -68,12 +73,18 @@ interface FeaturesGridProps {
   data?: FeatureProps[];
 }
 
-export function FeaturesGrid({ title, description, data = MOCKDATA }: FeaturesGridProps) {
+export function FeaturesGrid({
+  title,
+  description,
+  data = MOCKDATA,
+}: FeaturesGridProps) {
   const { classes } = useStyles();
-    const theme = useMantineTheme();
-    const features = data.map((feature, index) => <Feature {...feature} key={index} />);
-        const title_ = lo[1].props.title;
-    const description_ = lo[1].props.description;
+  const theme = useMantineTheme();
+  const features = data.map((feature, index) => (
+    <Feature {...feature} key={index} />
+  ));
+  const title_ = lo[1].props.title;
+  const description_ = lo[1].props.description;
 
   return (
     <Container className={classes.wrapper}>
@@ -90,8 +101,8 @@ export function FeaturesGrid({ title, description, data = MOCKDATA }: FeaturesGr
         cols={3}
         spacing={theme.spacing.xl * 2}
         breakpoints={[
-          { maxWidth: 980, cols: 2, spacing: 'xl' },
-          { maxWidth: 755, cols: 1, spacing: 'xl' },
+          { maxWidth: 980, cols: 2, spacing: "xl" },
+          { maxWidth: 755, cols: 1, spacing: "xl" },
         ]}
       >
         {features}

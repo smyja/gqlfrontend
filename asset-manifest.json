@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gqlfrontend/static/css/main.e6c13ad2.css",
+    "main.js": "/gqlfrontend/static/js/main.27bfeda8.js",
+    "static/js/787.28cb0dcd.chunk.js": "/gqlfrontend/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/gqlfrontend/index.html",
+    "main.e6c13ad2.css.map": "/gqlfrontend/static/css/main.e6c13ad2.css.map",
+    "main.27bfeda8.js.map": "/gqlfrontend/static/js/main.27bfeda8.js.map",
+    "787.28cb0dcd.chunk.js.map": "/gqlfrontend/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.27bfeda8.js"
+  ]
+}

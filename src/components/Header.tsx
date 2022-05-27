@@ -54,8 +54,7 @@ interface HeaderSimpleProps {
 }
 
 export function HeaderSimple({ low }: HeaderSimpleProps) {
-  const [opened, toggleOpened] = useBooleanToggle(false);
-   
+  const [opened, toggleOpened] = useBooleanToggle(false);   
   const [active, setActive] = useState('');
   const { classes, cx } = useStyles();
   const linkos = lo[0].props.links;
@@ -75,7 +74,7 @@ export function HeaderSimple({ low }: HeaderSimpleProps) {
   ));
 
     return (
-      <Header height={60} mb={120}>
+      <Header height={60} >
         <Container className={classes.header}>
           {/* <MantineLogo /> */}
           Relearn

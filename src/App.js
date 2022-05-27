@@ -1,7 +1,7 @@
 import { HeaderSimple } from "./components/Header.tsx";
 import { HeroImageRight } from "./components/HeroPage.tsx";
 import { FeaturesGrid } from "./components/FeaturesPage.tsx";
-import { FooterSocial } from "./components/Footer.tsx";
+import {ContactUs} from "./components/ContactUs.tsx"
 
 function App() {
   return (
@@ -9,7 +9,8 @@ function App() {
       <HeaderSimple />
       <HeroImageRight />
       <FeaturesGrid />
-      <FooterSocial />
+      <ContactUs/>
+   
     </div>
   );
 }

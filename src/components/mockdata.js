@@ -1,4 +1,4 @@
-import { Gauge, Cookie, User, Message2, Lock } from "tabler-icons-react";
+import { Gauge, Cookie, User } from "tabler-icons-react";
 
 export const MOCKDATA = [
   {
@@ -19,16 +19,5 @@ export const MOCKDATA = [
     description:
       "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
   },
-  {
-    icon: Lock,
-    title: "Secure by default",
-    description:
-      "Although it still can’t fly, its jumping power is outstanding, in Alola the mushrooms on Paras don’t grow up quite right",
-  },
-  {
-    icon: Message2,
-    title: "24/7 Support",
-    description:
-      "Rapidash usually can be seen casually cantering in the fields and plains, Skitty is known to chase around after its own tail",
-  },
+  
 ];

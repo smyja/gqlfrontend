@@ -82,22 +82,20 @@ export function HeroImageRight() {
         <div className={classes.inner}>
           <div className={classes.content}>
             <Title className={classes.title}>
-              A{" "}
+              Empowering Kids in{" "}
               <Text
                 component="span"
                 inherit
                 variant="gradient"
                 gradient={{ from: "pink", to: "yellow" }}
               >
-                fully featured
+                Underserved Communities
               </Text>{" "}
-              React components library
+             through code
             </Title>
 
             <Text className={classes.description} mt={30}>
-              Build fully functional accessible web applications with ease –
-              Mantine includes more than 100 customizable components and hooks
-              to cover you in any situation
+            We are on a mission to get kids to become more comfortable with technology at a young age, so that as adults, they can continue to innovate and shape our world.
             </Text>
 
             <Button
@@ -107,7 +105,7 @@ export function HeroImageRight() {
               className={classes.control}
               mt={40}
             >
-              Get started
+              Join the waitlist
             </Button>
           </div>
         </div>

@@ -3,21 +3,21 @@ import { Gauge, Cookie, User } from "tabler-icons-react";
 export const MOCKDATA = [
   {
     icon: Gauge,
-    title: "Extreme performance",
+    title: "Mini Courses",
     description:
-      "This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit",
+      "We offer courses for kids to learn about computers and computer programming",
   },
   {
     icon: User,
-    title: "Privacy focused",
+    title: "Problem solving",
     description:
-      "People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma",
+      "Improving critical thinking and problem solving skills with quizzes and games is a priority for Relearn",
   },
   {
     icon: Cookie,
-    title: "No third parties",
+    title: "Collaboration",
     description:
-      "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
+      "Helpimg kids collaborate to tackle certain complex problems",
   },
   
 ];

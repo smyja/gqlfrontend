@@ -91,7 +91,7 @@ export function HeroImageRight() {
               >
                 Underserved Communities
               </Text>{" "}
-             through code
+            
             </Title>
 
             <Text className={classes.description} mt={30}>

@@ -2,7 +2,7 @@ const lo = [
   {
     title: "Simple header",
     category: "headers",
-    author: "rtivital",
+    author: "mantine",
     withColor: true,
     responsive: true,
     dependencies: [
@@ -13,10 +13,8 @@ const lo = [
     ],
     props: {
       links: [
-        { link: "/about", label: "Features" },
-        { link: "/pricing", label: "Pricing" },
-        { link: "/learn", label: "Learn" },
-        { link: "/community", label: "Community" },
+        { link: "/learn", label: "learn" },
+  
       ],
     },
     canvas: {
@@ -40,7 +38,7 @@ const lo = [
       "tabler-icons-react",
     ],
     props: {
-      title: "Integrate effortlessly with any technology stack",
+      title: "",
       description:
         "Every once in a while, you’ll see a Golbat that’s missing some fangs. This happens when hunger drives it to try biting a Steel-type Pokémon.",
     },

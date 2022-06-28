@@ -12,7 +12,7 @@ import {
   Button,
 } from '@mantine/core';
 
-export function AuthenticationTitle() {
+export function Signup() {
     return (
         <div>
             <Container size={420} my={40}>
@@ -20,11 +20,11 @@ export function AuthenticationTitle() {
         align="center"
         sx={(theme) => ({ fontFamily: `Greycliff CF, ${theme.fontFamily}`, fontWeight: 900 })}
       >
-        Welcome back!
+        Create an account
       </Title>
       <Text color="dimmed" size="sm" align="center" mt={5}>
         Do not have an account yet?{' '}
-        <Anchor<'a'> href="/signup" size="sm" >
+        <Anchor<'a'> href="#" size="sm" onClick={(event) => event.preventDefault()}>
           Create account
         </Anchor>
       </Text>
@@ -34,7 +34,7 @@ export function AuthenticationTitle() {
         <PasswordInput label="Password" placeholder="Your password" required mt="md" />
         <Group position="apart" mt="md">
           <Checkbox label="Remember me" />
-          <Anchor<'a'> href="forgot-password" size="sm">
+          <Anchor<'a'> onClick={(event) => event.preventDefault()} href="#" size="sm">
             Forgot password?
           </Anchor>
         </Group>

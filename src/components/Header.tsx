@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   createStyles,
   Header,
@@ -74,6 +75,7 @@ export function HeaderSimple({ low }: HeaderSimpleProps) {
   const { classes, cx } = useStyles();
   const linkos = lo[0].props.links;
   const items = linkos.map((link) => (
+    
     <a
       key={link.label}
       href={link.link}
@@ -81,7 +83,7 @@ export function HeaderSimple({ low }: HeaderSimpleProps) {
         [classes.linkActive]: active === link.link,
       })}
       onClick={(event) => {
-        event.preventDefault();
+        
         setActive(link.link);
       }}
     >

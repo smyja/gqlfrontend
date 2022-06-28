@@ -1,25 +1,30 @@
-import { HeaderSimple } from "./components/Header.tsx";
-import { HeroImageRight } from "./components/HeroPage.tsx";
-import { FeaturesGrid } from "./components/FeaturesPage.tsx";
-import { ContactUs } from "./components/ContactUs.tsx"
-import { Login } from "./components/Login.tsx";
+
+import { AuthenticationTitle } from "./components/Login.tsx";
+import LandingPage from "./components/LandingPage";
+import { ForgotPassword } from "./components/ForgotPassword.tsx";
+import { Signup }  from "./components/Signup.tsx";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
+  
 } from "react-router-dom";
 function App() {
   return (
     <Router>
     <div className="App">
-      <HeaderSimple />
-      <HeroImageRight />
-      <FeaturesGrid />
-      <ContactUs />
+    
         <Routes>
-          <Route path="/" element={<div>Home</div>} />
-          <Route path="/login" element={<Login />} />
-       </Routes>
+        <Route index element={<LandingPage />} />
+            {/* login route */}
+           
+          <Route exact path="login" element={<AuthenticationTitle />} />
+          <Route exact path="signup" element={<Signup />} />
+          <Route exact path="forgot-password" element={<ForgotPassword />} />
+          </Routes>
+     
+        
+
       </div>
     </Router>
   );

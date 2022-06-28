@@ -14,6 +14,8 @@ const lo = [
     props: {
       links: [
         { link: "/learn", label: "learn" },
+        { link: "/login", label: "Login" },
+        { link: "/signup", label: "Signup" },
   
       ],
     },

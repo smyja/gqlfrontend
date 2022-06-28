@@ -6,3 +6,5 @@ To deploy to github pages, run the following command:
 ``` 
 npm run deploy
 ```
+
+Hash router link : https://tryrelearn.xyz/#/login

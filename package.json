@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "http://tryrelearn.xyz",
+  "homepage": "https://tryrelearn.xyz",
   "private": true,
   "dependencies": {
     "@mantine/core": "^4.2.6",

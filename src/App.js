@@ -4,14 +4,15 @@ import LandingPage from "./components/LandingPage";
 import { ForgotPassword } from "./components/ForgotPassword.tsx";
 import { Signup }  from "./components/Signup.tsx";
 import {
-  BrowserRouter as Router,
+  
   Routes,
   Route,
+
   
 } from "react-router-dom";
 function App() {
   return (
-    <Router>
+    
     <div className="App">
     
         <Routes>
@@ -26,7 +27,7 @@ function App() {
         
 
       </div>
-    </Router>
+  
   );
 }
 

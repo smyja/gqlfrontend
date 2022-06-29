@@ -9,8 +9,8 @@ import {
   createStyles,
 } from "@mantine/core";
 import { Icon as TablerIcon } from "tabler-icons-react";
-import { MOCKDATA } from "./mockdata.js";
-import lo from "./attributes.js";
+import { MOCKDATA } from "../mockdata.js";
+import lo from "../attributes.js";
 
 interface FeatureProps {
   icon: TablerIcon;

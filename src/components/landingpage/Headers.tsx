@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
-import lo from "./attributes.js";
+import lo from "../attributes.js";
 
 const HEADER_HEIGHT = 60;
 

@@ -1,8 +1,8 @@
 import React from "react";
-import { HeroImageRight } from "../components/HeroPage.tsx";
-import { FeaturesGrid } from "../components/FeaturesPage.tsx";
-import { ContactUs } from "../components/ContactUs.tsx";
-import { HeaderResponsive } from "./Headers.tsx";
+import { HeroImageRight } from "./landingpage/HeroPage.tsx";
+import { FeaturesGrid } from "./landingpage/FeaturesPage.tsx";
+import { ContactUs } from "./landingpage/ContactUs.tsx";
+import { HeaderResponsive } from "./landingpage/Headers.tsx";
 const LandingPage = () => {
   return (
     <>

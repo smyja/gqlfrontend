@@ -4,7 +4,7 @@ import { AuthenticationTitle } from "./components/Login.tsx";
 import LandingPage from "./components/LandingPage";
 import { ForgotPassword } from "./components/ForgotPassword.tsx";
 import { Signup } from "./components/Signup.tsx";
-import { NavbarSearch } from "./components/Dashboard";
+import { NavbarSearch } from "./components/Dashboard.tsx";
 import {
   Routes,
   Route,

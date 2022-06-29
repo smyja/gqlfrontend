@@ -1,12 +1,12 @@
 import React from "react";
-import { HeaderSimple } from "../components/Header.tsx";
 import { HeroImageRight } from "../components/HeroPage.tsx";
 import { FeaturesGrid } from "../components/FeaturesPage.tsx";
-import { ContactUs }  from "../components/ContactUs.tsx";
+import { ContactUs } from "../components/ContactUs.tsx";
+import { HeaderResponsive } from "./Headers.tsx";
 const LandingPage = () => {
   return (
     <>
-      <HeaderSimple />
+      <HeaderResponsive />
       <HeroImageRight />
 <FeaturesGrid />
   <ContactUs />

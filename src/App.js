@@ -1,38 +1,37 @@
-import React,{useContext} from "react";
+import React, { useContext } from "react";
 import { AuthContext, AuthContextProvider } from "./contexts/AuthContext";
 import { AuthenticationTitle } from "./components/Login.tsx";
 import LandingPage from "./components/LandingPage";
 import { ForgotPassword } from "./components/ForgotPassword.tsx";
 import { Signup } from "./components/Signup.tsx";
 import { NavbarSearch } from "./components/Dashboard.tsx";
-import {
-  Routes,
-  Route,
-  Navigate 
-  
-} from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 function PrivateRoute({ children }) {
-  const { user } = useContext(AuthContext)
-  return user ? children : <Navigate replace to="/login" />
+  const { user } = useContext(AuthContext);
+  return user ? children : <Navigate replace to="/login" />;
 }
 function App() {
   return (
-    
     <div className="App">
       <AuthContextProvider>
         <Routes>
-        <Route index element={<LandingPage />} />
-        <Route path="/dashboard" element={<PrivateRoute><NavbarSearch /></PrivateRoute>} exact/>
+          <Route index element={<LandingPage />} />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <NavbarSearch />
+              </PrivateRoute>
+            }
+            exact
+          />
           <Route exact path="login" element={<AuthenticationTitle />} />
           <Route exact path="signup" element={<Signup />} />
           <Route exact path="forgot-password" element={<ForgotPassword />} />
         </Routes>
       </AuthContextProvider>
-
-
-      </div>
-  
+    </div>
   );
 }
 

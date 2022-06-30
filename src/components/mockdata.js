@@ -16,8 +16,6 @@ export const MOCKDATA = [
   {
     icon: Cookie,
     title: "Collaboration",
-    description:
-      "Helping kids collaborate to tackle certain complex problems",
+    description: "Helping kids collaborate to tackle certain complex problems",
   },
-  
 ];

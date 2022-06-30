@@ -1,35 +1,36 @@
-import React, { useState } from 'react'
-import { authenticationService } from '../services/authentication'
+import React, { useState } from "react";
+import { authenticationService } from "../services/authentication";
 
-export const AuthContext = React.createContext(null)
+export const AuthContext = React.createContext(null);
 
 export function AuthContextProvider({ children }) {
+  const [user, setUser] = useState(() => {
+    return authenticationService.getUser();
+  });
 
-    const [user, setUser] = useState(() => {
-        return authenticationService.getUser()
-    })
+  function logout() {
+    authenticationService.logout();
+    setUser(null);
+  }
 
-    function logout() {
-        authenticationService.logout()
-        setUser(null)
-    }
-    
-    function login(token) {
-        const user = authenticationService.tokenlogin(token)
-        setUser(user)
-    }
-    function signup(token) {
-        const user = authenticationService.tokenlogin(token)
-        setUser(user)
-    }
-    return (
-        <AuthContext.Provider value={{
-            logout,
-            login,
-            signup,
-            user
-        }}>
-            {children}
-        </AuthContext.Provider>
-    )
+  function login(token) {
+    const user = authenticationService.tokenlogin(token);
+    setUser(user);
+  }
+  function signup(token) {
+    const user = authenticationService.tokenlogin(token);
+    setUser(user);
+  }
+  return (
+    <AuthContext.Provider
+      value={{
+        logout,
+        login,
+        signup,
+        user,
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
 }

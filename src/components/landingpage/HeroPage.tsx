@@ -91,11 +91,12 @@ export function HeroImageRight() {
               >
                 Underserved Communities
               </Text>{" "}
-            
             </Title>
 
             <Text className={classes.description} mt={30}>
-            We are on a mission to get kids to become more comfortable with technology at a young age, so that as adults, they can continue to innovate and shape our world.
+              We are on a mission to get kids to become more comfortable with
+              technology at a young age, so that as adults, they can continue to
+              innovate and shape our world.
             </Text>
 
             <Button

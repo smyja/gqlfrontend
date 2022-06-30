@@ -8,12 +8,10 @@ const LandingPage = () => {
     <>
       <HeaderResponsive />
       <HeroImageRight />
-<FeaturesGrid />
-  <ContactUs />
-
+      <FeaturesGrid />
+      <ContactUs />
     </>
   );
 };
 
 export default LandingPage;
-

@@ -13,7 +13,7 @@ import {
   Container,
   Group,
   Button,
-} from '@mantine/core';
+} from "@mantine/core";
 
 export function AuthenticationTitle() {
   const [loading, setLoading] = useState(false);
@@ -27,47 +27,74 @@ export function AuthenticationTitle() {
     setLoading(true);
     e.preventDefault();
     authenticationService
-      .login(username, email, password)
+      .login(username, password)
       .then((res) => {
         setLoading(false);
-        login(res.data.key)
-        history("/");
+        login(res.data.key);
+        history("/dashboard");
       })
       .catch((error) => {
         setLoading(false);
         setError(error.message || error);
       });
   }
-    return (
-        <div>
-            <Container size={420} my={40}>
-      <Title
-        align="center"
-        sx={(theme) => ({ fontFamily: `Greycliff CF, ${theme.fontFamily}`, fontWeight: 900 })}
-      >
-        Welcome back!
-      </Title>
-      <Text color="dimmed" size="sm" align="center" mt={5}>
-        Do not have an account yet?{' '}
-        <Anchor<'a'> href="/#/signup" size="sm" >
-          Create account
-        </Anchor>
-      </Text>
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <Container size={420} my={40}>
+          <Title
+            align="center"
+            sx={(theme) => ({
+              fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+              fontWeight: 900,
+            })}
+          >
+            Welcome back!
+          </Title>
+          <Text color="dimmed" size="sm" align="center" mt={5}>
+            Do not have an account yet?{" "}
+            <Anchor<"a"> href="/#/signup" size="sm">
+              Create account
+            </Anchor>
+          </Text>
 
-      <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-        <TextInput label="Email" placeholder="you@tryrelearn.xyz" required />
-        <PasswordInput label="Password" placeholder="Your password" required mt="md" />
-        <Group position="apart" mt="md">
-          <Checkbox label="Remember me" />
-          <Anchor<'a'> href="forgot-password" size="sm">
-            Forgot password?
-          </Anchor>
-        </Group>
-        <Button fullWidth mt="xl">
-          Sign in
-        </Button>
-      </Paper>
-    </Container></div>
-
+          <Paper withBorder shadow="md" p={30} mt={30} radius="md">
+            <TextInput
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              label="Username"
+              placeholder="Enter your username"
+              required
+            />
+            <PasswordInput
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              label="Password"
+              placeholder="Your password"
+              required
+              mt="md"
+            />
+            <Group position="apart" mt="md">
+              <Checkbox label="Remember me" />
+              <Anchor<"a"> href="forgot-password" size="sm">
+                Forgot password?
+              </Anchor>
+            </Group>
+            <Button
+              fullWidth
+              mt="xl"
+              type="submit"
+              loading={loading}
+              disabled={loading}
+            >
+              Sign in
+            </Button>
+            {error && <p>{error}</p>}
+          </Paper>
+        </Container>
+      </form>
+    </div>
   );
 }

@@ -12,11 +12,11 @@ authAxios.interceptors.request.use((config) => {
   return newConfig;
 });
 
-function login(username, email, password) {
+function login(username, password) {
   return axios
     .post(api.auth.login, {
       username,
-      email,
+
       password,
     })
     .then((res) => {

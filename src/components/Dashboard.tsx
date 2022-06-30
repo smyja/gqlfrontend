@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   createStyles,
   Navbar,
@@ -10,9 +10,8 @@ import {
   Group,
   ActionIcon,
   Tooltip,
-} from '@mantine/core';
-import { Bulb, User, Checkbox, Search, Plus } from 'tabler-icons-react';
-
+} from "@mantine/core";
+import { Bulb, User, Checkbox, Search, Plus } from "tabler-icons-react";
 
 const useStyles = createStyles((theme) => ({
   navbar: {
@@ -24,9 +23,11 @@ const useStyles = createStyles((theme) => ({
     marginRight: -theme.spacing.md,
     marginBottom: theme.spacing.md,
 
-    '&:not(:last-of-type)': {
+    "&:not(:last-of-type)": {
       borderBottom: `1px solid ${
-        theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
+        theme.colorScheme === "dark"
+          ? theme.colors.dark[4]
+          : theme.colors.gray[3]
       }`,
     },
   },
@@ -34,9 +35,12 @@ const useStyles = createStyles((theme) => ({
   searchCode: {
     fontWeight: 700,
     fontSize: 10,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
+    backgroundColor:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[7]
+        : theme.colors.gray[0],
     border: `1px solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[2]
+      theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.colors.gray[2]
     }`,
   },
 
@@ -47,37 +51,46 @@ const useStyles = createStyles((theme) => ({
   },
 
   mainLink: {
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
+    display: "flex",
+    alignItems: "center",
+    width: "100%",
     fontSize: theme.fontSizes.xs,
     padding: `8px ${theme.spacing.xs}px`,
     borderRadius: theme.radius.sm,
     fontWeight: 500,
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
+    color:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[0]
+        : theme.colors.gray[7],
 
-    '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-      color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    "&:hover": {
+      backgroundColor:
+        theme.colorScheme === "dark"
+          ? theme.colors.dark[6]
+          : theme.colors.gray[0],
+      color: theme.colorScheme === "dark" ? theme.white : theme.black,
     },
   },
 
   mainLinkInner: {
-    display: 'flex',
-    alignItems: 'center',
+    display: "flex",
+    alignItems: "center",
     flex: 1,
   },
 
   mainLinkIcon: {
     marginRight: theme.spacing.sm,
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[2] : theme.colors.gray[6],
+    color:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[2]
+        : theme.colors.gray[6],
   },
 
   mainLinkBadge: {
     padding: 0,
     width: 20,
     height: 20,
-    pointerEvents: 'none',
+    pointerEvents: "none",
   },
 
   collections: {
@@ -93,38 +106,44 @@ const useStyles = createStyles((theme) => ({
   },
 
   collectionLink: {
-    display: 'block',
+    display: "block",
     padding: `8px ${theme.spacing.xs}px`,
-    textDecoration: 'none',
+    textDecoration: "none",
     borderRadius: theme.radius.sm,
     fontSize: theme.fontSizes.xs,
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
+    color:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[0]
+        : theme.colors.gray[7],
     lineHeight: 1,
     fontWeight: 500,
 
-    '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-      color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    "&:hover": {
+      backgroundColor:
+        theme.colorScheme === "dark"
+          ? theme.colors.dark[6]
+          : theme.colors.gray[0],
+      color: theme.colorScheme === "dark" ? theme.white : theme.black,
     },
   },
 }));
 
 const links = [
-  { icon: Bulb, label: 'Activity', notifications: 3 },
-  { icon: Checkbox, label: 'Tasks', notifications: 4 },
-  { icon: User, label: 'Contacts' },
+  { icon: Bulb, label: "Activity", notifications: 3 },
+  { icon: Checkbox, label: "Tasks", notifications: 4 },
+  { icon: User, label: "Contacts" },
 ];
 
 const collections = [
-  { emoji: '👍', label: 'Sales' },
-  { emoji: '🚚', label: 'Deliveries' },
-  { emoji: '💸', label: 'Discounts' },
-  { emoji: '💰', label: 'Profits' },
-  { emoji: '✨', label: 'Reports' },
-  { emoji: '🛒', label: 'Orders' },
-  { emoji: '📅', label: 'Events' },
-  { emoji: '🙈', label: 'Debts' },
-  { emoji: '💁‍♀️', label: 'Customers' },
+  { emoji: "👍", label: "Sales" },
+  { emoji: "🚚", label: "Deliveries" },
+  { emoji: "💸", label: "Discounts" },
+  { emoji: "💰", label: "Profits" },
+  { emoji: "✨", label: "Reports" },
+  { emoji: "🛒", label: "Orders" },
+  { emoji: "📅", label: "Events" },
+  { emoji: "🙈", label: "Debts" },
+  { emoji: "💁‍♀️", label: "Customers" },
 ];
 
 export function NavbarSearch() {
@@ -151,15 +170,14 @@ export function NavbarSearch() {
       key={collection.label}
       className={classes.collectionLink}
     >
-      <span style={{ marginRight: 9, fontSize: 16 }}>{collection.emoji}</span> {collection.label}
+      <span style={{ marginRight: 9, fontSize: 16 }}>{collection.emoji}</span>{" "}
+      {collection.label}
     </a>
   ));
 
   return (
     <Navbar height={700} width={{ sm: 300 }} p="md" className={classes.navbar}>
-          <Navbar.Section className={classes.section}>
-              Relearn 
-      </Navbar.Section>
+      <Navbar.Section className={classes.section}>Relearn</Navbar.Section>
 
       <TextInput
         placeholder="Search"
@@ -167,7 +185,7 @@ export function NavbarSearch() {
         icon={<Search size={12} />}
         rightSectionWidth={70}
         rightSection={<Code className={classes.searchCode}>Ctrl + K</Code>}
-        styles={{ rightSection: { pointerEvents: 'none' } }}
+        styles={{ rightSection: { pointerEvents: "none" } }}
         mb="sm"
       />
 

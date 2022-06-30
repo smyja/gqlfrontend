@@ -66,6 +66,7 @@ export function Signup() {
 
           <Paper withBorder shadow="md" p={30} mt={30} radius="md">
             <TextInput
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               label="Email"
@@ -79,6 +80,7 @@ export function Signup() {
               label="Username"
               placeholder="Enter your username"
               required
+              mt="md"
             />
             <PasswordInput
               label="Password"

@@ -6,7 +6,7 @@ console.log(process.env);
 export const api = {
   auth: {
     login: `${baseURL}/api/v1/login/`,
-    register: `${baseURL}/api/v1/registration/`,
+    register: `${baseURL}/api/v1/signup/`,
     logout: `${baseURL}/api/v1/logout/`,
   },
 

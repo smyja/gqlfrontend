@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { authenticationService } from "../services/authentication";
 import { AuthContext } from "../contexts/AuthContext";
+import { showNotification, updateNotification } from "@mantine/notifications";
+
 import {
   TextInput,
   PasswordInput,
@@ -14,13 +16,15 @@ import {
   Group,
   Button,
 } from "@mantine/core";
+import { Check } from "tabler-icons-react"
+
 
 export function AuthenticationTitle() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [status, setStatus] = useState(undefined);
   const { login } = useContext(AuthContext);
   const history = useNavigate();
   function handleSubmit(e) {
@@ -30,11 +34,34 @@ export function AuthenticationTitle() {
       .login(username, password)
       .then((res) => {
         setLoading(false);
+        setStatus({ type: 'success' });
+        showNotification({
+          id: "load-data",
+          loading: true,
+          title: "Signing in...",
+          message:
+            "Signing in to your account, please wait while we load your data.",
+          autoClose: false,
+          disallowClose: true,
+        })
+        setTimeout(() => {
+          updateNotification({
+            id: "load-data",
+            loading: false,
+            title: "Welcome to Relearn",
+            message: "Welcome to your account, please wait while we load your data.",
+            autoClose: true,
+            disallowClose: false,
+            icon: <Check />,
+          })
+        }
+          , 3000);
         login(res.data.key);
         history("/dashboard");
       })
       .catch((error) => {
         setLoading(false);
+        setStatus({ type: 'error', error });
         setError(error.message || error);
       });
   }
@@ -51,6 +78,7 @@ export function AuthenticationTitle() {
           >
             Welcome back!
           </Title>
+
           <Text color="dimmed" size="sm" align="center" mt={5}>
             Do not have an account yet?{" "}
             <Anchor<"a"> href="/#/signup" size="sm">
@@ -88,13 +116,32 @@ export function AuthenticationTitle() {
               type="submit"
               loading={loading}
               disabled={loading}
+             
             >
               Sign in
             </Button>
+
             {error && <p>{error}</p>}
           </Paper>
         </Container>
       </form>
+      <>
+        {status?.type === "error" &&
+          showNotification({
+            id: "load-data",
+            loading: false,
+            title: "  Error",
+            color: "red",
+            message: "Something went wrong",
+            autoClose: true,
+            disallowClose: false,
+          })}
+      </>
+      <>
+        {" "}
+        
+      
+      </>
     </div>
   );
 }

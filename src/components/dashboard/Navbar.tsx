@@ -175,8 +175,12 @@ export function NavbarSearch() {
     </a>
   ));
 
-  return (
-    <Navbar height={700} width={{ sm: 300 }} p="md" className={classes.navbar}>
+  return (<>
+    <Navbar height={700} width={{ sm: 300, lg: 220 }}
+      hiddenBreakpoint="sm"
+            // Hides navbar when viewport size is less than value specified in hiddenBreakpoint
+      
+      p="md" className={classes.navbar}>
       <Navbar.Section className={classes.section}>Relearn</Navbar.Section>
 
       <TextInput
@@ -205,7 +209,7 @@ export function NavbarSearch() {
           </Tooltip>
         </Group>
         <div className={classes.collections}>{collectionLinks}</div>
-      </Navbar.Section>
-    </Navbar>
+      </Navbar.Section> hhh
+    </Navbar>hh</>
   );
 }

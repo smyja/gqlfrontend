@@ -4,9 +4,11 @@
   "homepage": "https://tryrelearn.xyz",
   "private": true,
   "dependencies": {
+    "@iconify/react": "^3.2.2",
     "@mantine/core": "^4.2.6",
     "@mantine/hooks": "^4.2.6",
     "@mantine/notifications": "^4.2.11",
+    "@radix-ui/react-icons": "^1.1.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",

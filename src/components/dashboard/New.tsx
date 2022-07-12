@@ -145,7 +145,8 @@ const Courses = () => {
         <div className={cx(classes.boxPosition, classes.boxP)}>
         <Space h="sm" />
           <Icon
-            icon="emojione:maple-leaf"        
+            icon="emojione:maple-leaf"
+           
             height="50"
             rotate={2}
             hFlip={true}

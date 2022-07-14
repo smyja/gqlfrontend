@@ -1,3 +1,4 @@
+import "./index.css";
 import React from "react";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
@@ -70,7 +71,7 @@ const DashboardShell = () => {
             // viewport size > theme.breakpoints.lg – width is 400px
             width={{ sm: 300, lg: 220 }}
             className={classes.navvbar}
-            style={{backgroundColor:"#63BA86"}}
+            style={{backgroundColor:"white"}}
           >
             <List
               spacing="xs"
@@ -93,8 +94,7 @@ const DashboardShell = () => {
                   return {
                     display: "block",
                     margin: "1rem 0",
-                    borderRadius: "5px",
-                    color: "white",
+                    color: "#14354E",
                     backgroundColor: isActive ? "#8BC2A1" : "",
                     fontWeight: isActive ? "900" : "",
                   };
@@ -109,8 +109,7 @@ const DashboardShell = () => {
                   return {
                     display: "block",
                     margin: "1rem 0",
-                    borderRadius: "5px",
-                    color: "white",
+                    color: "#14354E",
                     backgroundColor: isActive ? "#8BC2A1" : "",
                     fontWeight: isActive ? "900" : "",
                   };
@@ -125,8 +124,7 @@ const DashboardShell = () => {
                   return {
                     display: "block",
                     margin: "1rem 0",
-                    borderRadius: "5px",
-                    color: "white",
+                    color: "#14354E",
                     backgroundColor: isActive ? "#8BC2A1" : "",
                     fontWeight: isActive ? "900" : "",
                   };
@@ -154,7 +152,7 @@ const DashboardShell = () => {
                 />
               </MediaQuery>
               <Text className={classes.header} weight={400} color="#63BA86">
-                Available Hospitals
+                Hey,Nonso
               </Text>
               <Group
                 direction="row"

@@ -60,11 +60,9 @@ const Courses = () => {
             style={{marginLeft:"79px"}}
           />
           <Text align="center" color="#63BA86" weight={700}>
-            IRUACLINIC
+            Python
           </Text>
-          <Text align="center" color="#63BA86" weight={400}>
-            10AM - 5PM
-          </Text>
+     
           <Space h="xs" />
           <Text align="center" color="#63BA86" weight={400}>
             {" "}
@@ -76,7 +74,7 @@ const Courses = () => {
             size="xs"
           >
             <Text align="center" color="white" weight={400}>
-              BOOK
+              START
             </Text>
           </Button>{" "}
         </div>
@@ -91,11 +89,9 @@ const Courses = () => {
             style={{marginLeft:"79px"}}
           />
           <Text align="center" color="#63BA86" weight={700}>
-            IRUACLINIC
+            Python
           </Text>
-          <Text align="center" color="#63BA86" weight={400}>
-            10AM - 5PM
-          </Text>
+        
           <Space h="xs" />
           <Text align="center" color="#63BA86" weight={400}>
             {" "}
@@ -107,7 +103,7 @@ const Courses = () => {
             size="xs"
           >
             <Text align="center" color="white" weight={400}>
-              BOOK
+              START
             </Text>
           </Button>{" "}
         </div>
@@ -122,7 +118,7 @@ const Courses = () => {
             style={{marginLeft:"79px"}}
           />
           <Text align="center" color="#63BA86" weight={700}>
-            IRUACLINIC
+            Python
           </Text>
           <Text align="center" color="#63BA86" weight={400}>
             10AM - 5PM
@@ -138,7 +134,7 @@ const Courses = () => {
             size="xs"
           >
             <Text align="center" color="white" weight={400}>
-              BOOK
+              START
             </Text>
           </Button>{" "}
         </div>
@@ -153,11 +149,9 @@ const Courses = () => {
             style={{marginLeft:"79px"}}
           />
           <Text align="center" color="#63BA86" weight={700}>
-            IRUACLINIC
+            Python
           </Text>
-          <Text align="center" color="#63BA86" weight={400}>
-            10AM - 5PM
-          </Text>
+      
           <Space h="xs" />
           <Text align="center" color="#63BA86" weight={400}>
             {" "}
@@ -169,7 +163,7 @@ const Courses = () => {
             size="xs"
           >
             <Text align="center" color="white" weight={400}>
-              BOOK
+              START
             </Text>
           </Button>{" "}
         </div>
@@ -184,7 +178,7 @@ const Courses = () => {
             style={{marginLeft:"79px"}}
           />
           <Text align="center" color="#63BA86" weight={700}>
-            IRUACLINIC
+            Python
           </Text>
           <Text align="center" color="#63BA86" weight={400}>
             10AM - 5PM
@@ -200,7 +194,7 @@ const Courses = () => {
             size="xs"
           >
             <Text align="center" color="white" weight={400}>
-              BOOK
+              START
             </Text>
           </Button>{" "}
         </div>

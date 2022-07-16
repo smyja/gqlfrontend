@@ -58,7 +58,8 @@ const DashboardShell = () => {
         // navbarOffsetBreakpoint controls when navbar should no longer be offset with padding-left
         navbarOffsetBreakpoint="sm"
         // fixed prop on AppShell will be automatically added to Header and Navbar
-        fixed
+      fixed
+      style={{backgroundColor:"#FBFBFB"}}
         navbar={
           <Navbar
             padding="md"
@@ -79,8 +80,8 @@ const DashboardShell = () => {
               center
               icon={
                 <Icon
-                  icon="codicon:home"
-                  color="white"
+                  icon="entypo:home"
+                  color="#1E6386"
                   height="25"
                   rotate={2}
                   hFlip={true}
@@ -88,6 +89,7 @@ const DashboardShell = () => {
                 />
               }
             >
+           
               <List.Item
                 component={NavLink}
                 style={({ isActive }) => {
@@ -95,13 +97,13 @@ const DashboardShell = () => {
                     display: "block",
                     margin: "1rem 0",
                     color: "#14354E",
-                    backgroundColor: isActive ? "#8BC2A1" : "",
+                    backgroundColor: isActive ? "#DFECFF" : "",
                     fontWeight: isActive ? "900" : "",
                   };
                 }}
-                to="/dashboard/profile"
+                to="/dashboard/courses"
               >
-                Profile
+                Courses
               </List.Item>
               <List.Item
                 component={NavLink}
@@ -110,13 +112,13 @@ const DashboardShell = () => {
                     display: "block",
                     margin: "1rem 0",
                     color: "#14354E",
-                    backgroundColor: isActive ? "#8BC2A1" : "",
+                    backgroundColor: isActive ? "#DFECFF" : "",
                     fontWeight: isActive ? "900" : "",
                   };
                 }}
-                to="/dashboard/courses"
+                to="/dashboard/profile"
               >
-                Courses
+                Profile
               </List.Item>
               <List.Item
                 component={NavLink}

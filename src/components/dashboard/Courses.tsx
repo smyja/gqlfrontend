@@ -19,20 +19,18 @@ const useStyles = createStyles(() => ({
       left: "488px",
       top: "21.8px",
       background: "#FFFFFF",
-      boxShadow: "0px 0px 4px 1px rgba(0, 0, 0, 0.25)",
-      borderRadius: "10px",
+      border:"1px solid #000000",
     },
   },
   boxP: {
     "@media (min-width: 800px)": {
       marginLeft: "79px",
       width: "219px",
-      height: "209px",
+      height: "180px",
       left: "488px",
       top: "21.8px",
       background: "white",
-      boxShadow: "0px 0px 4px 1px rgba(0, 0, 0, 0.25)",
-      borderRadius: "10px",
+      border:"1px solid #000000",
     },
   },
 }));
@@ -59,7 +57,7 @@ const Courses = () => {
             vFlip={true}
             style={{marginLeft:"79px"}}
           />
-          <Text align="center" color="#63BA86" weight={700}>
+          <Text weight={400} style={{marginLeft:"10px"}}>
             Python
           </Text>
      
@@ -146,26 +144,13 @@ const Courses = () => {
             rotate={2}
             hFlip={true}
             vFlip={true}
-            style={{marginLeft:"79px"}}
+            // style={{marginLeft:"79px"}}
           />
-          <Text align="center" color="#63BA86" weight={700}>
+       <Text weight={400} style={{marginLeft:"10px"}}>
             Python
           </Text>
-      
           <Space h="xs" />
-          <Text align="center" color="#63BA86" weight={400}>
-            {" "}
-            STATUS: <Badge color="teal">ACTIVE</Badge>
-          </Text>
-          <Space h="xs" />
-          <Button
-            style={{ backgroundColor: "#63BA86", marginLeft: "67px" }}
-            size="xs"
-          >
-            <Text align="center" color="white" weight={400}>
-              START
-            </Text>
-          </Button>{" "}
+        
         </div>
         <div className={cx(classes.boxPosition, classes.boxP)}>
         <Space h="sm" />

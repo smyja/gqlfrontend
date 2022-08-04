@@ -55,7 +55,7 @@ export function AuthenticationTitle() {
             icon: <Check />,
           })
         }
-          , 3000);
+          , 4000);
         login(res.data.key);
         history("/dashboard");
       })

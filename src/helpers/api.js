@@ -10,8 +10,8 @@ export const api = {
     logout: `${baseURL}/api/v1/logout/`,
   },
 
-  posts: {
-    list: `${baseURL}/api/blog/posts/`,
+  courses: {
+    list: `${baseURL}/api/v1/dashboard/courses/`,
     create: `${baseURL}/api/blog/posts/create/`,
   },
 };

@@ -6,8 +6,8 @@ import { ForgotPassword } from "./components/ForgotPassword.tsx";
 import { Signup } from "./components/Signup.tsx";
 import DashboardShell from "./components/dashboard/Dashboard.jsx";
 import { Routes, Route, Navigate } from "react-router-dom";
-import  Courses  from "./components/dashboard/Courses.tsx";
-import Profile from "./components/dashboard/Profile.tsx";
+import LessonList from "./components/dashboard/Lessonlist";
+
 function PrivateRoute({ children }) {
   const { user } = useContext(AuthContext);
   return user ? children : <Navigate replace to="/login" />;
@@ -22,7 +22,8 @@ function App() {
             path="/dashboard/*"
             element={
               <PrivateRoute>
-                <DashboardShell/>
+                <DashboardShell />
+            
               </PrivateRoute>
             }
             exact

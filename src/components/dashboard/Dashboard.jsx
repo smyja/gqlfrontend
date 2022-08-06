@@ -13,6 +13,7 @@ import {
 import {Outlet, Routes,Route,NavLink } from "react-router-dom";
 import Profile from "./Profile.tsx";
 import Courses from "./Courses.tsx";
+import LessonList from "./Lessonlist";
 
 import {
   AppShell,
@@ -225,11 +226,12 @@ const DashboardShell = () => {
           </Header>
         }
       >
-     
+
      <Outlet />
      <Routes>
         <Route path="/profile" element={<Profile />} />
         <Route exact path="courses" element={<Courses />} />
+        <Route path="/courses/:courseSlug" element={<LessonList/>} />
         </Routes>
       </AppShell>
 

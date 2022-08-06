@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../../index.css";
 import { Icon } from "@iconify/react";
 import axios from "axios";
-import {api} from "../../helpers/api";
+import { api } from "../../helpers/api";
+import {NavLink} from 'react-router-dom';
 import {
   SimpleGrid,
   createStyles,
@@ -87,9 +88,10 @@ const Courses = () => {
             vFlip={true}
             // style={{marginLeft:"79px"}}
           />
-       <Text weight={400} style={{marginLeft:"10px"}}>
+        <NavLink to={`${course.slug}`}><Text weight={400} style={{marginLeft:"10px"}}>
             {course.title}
-          </Text>
+            </Text></NavLink>
+          
           {/* <Space h={5}/> */}
           <Text weight={300} style={{marginLeft:"10px",fontFamily:"Lato",fontSize:"14px"}}>
         {course.description}

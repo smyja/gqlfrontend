@@ -4,15 +4,15 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { NotificationsProvider } from '@mantine/notifications';
+import { NotificationsProvider } from "@mantine/notifications";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <HashRouter>
-    <NotificationsProvider>
+      <NotificationsProvider>
         <App />
-        </NotificationsProvider>
+      </NotificationsProvider>
     </HashRouter>
   </React.StrictMode>
 );

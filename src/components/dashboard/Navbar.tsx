@@ -175,41 +175,46 @@ export function NavbarSearch() {
     </a>
   ));
 
-  return (<>
-    <Navbar height={700} width={{ sm: 300, lg: 220 }}
-      hiddenBreakpoint="sm"
-            // Hides navbar when viewport size is less than value specified in hiddenBreakpoint
-      
-      p="md" className={classes.navbar}>
-      <Navbar.Section className={classes.section}>Relearn</Navbar.Section>
+  return (
+    <>
+      <Navbar
+        height={700}
+        width={{ sm: 300, lg: 220 }}
+        hiddenBreakpoint="sm"
+        // Hides navbar when viewport size is less than value specified in hiddenBreakpoint
 
-      <TextInput
-        placeholder="Search"
-        size="xs"
-        icon={<Search size={12} />}
-        rightSectionWidth={70}
-        rightSection={<Code className={classes.searchCode}>Ctrl + K</Code>}
-        styles={{ rightSection: { pointerEvents: "none" } }}
-        mb="sm"
-      />
-
-      <Navbar.Section className={classes.section}>
-        <div className={classes.mainLinks}>{mainLinks}</div>
-      </Navbar.Section>
-
-      <Navbar.Section className={classes.section}>
-        <Group className={classes.collectionsHeader} position="apart">
-          <Text size="xs" weight={500} color="dimmed">
-            Collections
-          </Text>
-          <Tooltip label="Create collection" withArrow position="right">
-            <ActionIcon variant="default" size={18}>
-              <Plus size={12} />
-            </ActionIcon>
-          </Tooltip>
-        </Group>
-        <div className={classes.collections}>{collectionLinks}</div>
-      </Navbar.Section> hhh
-    </Navbar>hh</>
+        p="md"
+        className={classes.navbar}
+      >
+        <Navbar.Section className={classes.section}>Relearn</Navbar.Section>
+        <TextInput
+          placeholder="Search"
+          size="xs"
+          icon={<Search size={12} />}
+          rightSectionWidth={70}
+          rightSection={<Code className={classes.searchCode}>Ctrl + K</Code>}
+          styles={{ rightSection: { pointerEvents: "none" } }}
+          mb="sm"
+        />
+        <Navbar.Section className={classes.section}>
+          <div className={classes.mainLinks}>{mainLinks}</div>
+        </Navbar.Section>
+        <Navbar.Section className={classes.section}>
+          <Group className={classes.collectionsHeader} position="apart">
+            <Text size="xs" weight={500} color="dimmed">
+              Collections
+            </Text>
+            <Tooltip label="Create collection" withArrow position="right">
+              <ActionIcon variant="default" size={18}>
+                <Plus size={12} />
+              </ActionIcon>
+            </Tooltip>
+          </Group>
+          <div className={classes.collections}>{collectionLinks}</div>
+        </Navbar.Section>{" "}
+        hhh
+      </Navbar>
+      hh
+    </>
   );
 }

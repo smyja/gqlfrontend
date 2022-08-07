@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import {Container, Header,Loader} from '@mantine/core'
 import axios from 'axios'
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
-const LessonList = () => {
+//pass lesson data to another component
+
+
+const LessonList = (props) => {
     const [lesson, setLesson] = useState(null)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null);
@@ -30,12 +33,11 @@ const LessonList = () => {
       {lesson?.map((lessons) => {
           return (
               <div key={lessons.id}>
-                {lessons.title}
+                  <Link to={`${lessons.slug}`} state={{title:lessons}}>{lessons.title}</Link>
                   
               </div>
           )
-      })}
-            {error && <p>{error}</p>}
+      })} {error && <p>{error}</p>}
             
         </Container>
     )

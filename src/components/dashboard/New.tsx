@@ -43,21 +43,20 @@ const Courses = () => {
     <div>
       <SimpleGrid
         breakpoints={[
-          { minWidth: "sm", cols: 2 ,spacing:12},
-          { minWidth: "md", cols: 3,spacing:12 },
-          { minWidth: 1200, cols: 3,spacing:52 }
-          
+          { minWidth: "sm", cols: 2, spacing: 12 },
+          { minWidth: "md", cols: 3, spacing: 12 },
+          { minWidth: 1200, cols: 3, spacing: 52 },
         ]}
       >
         <div className={cx(classes.boxPosition, classes.boxP)}>
-        <Space h="sm" />
+          <Space h="sm" />
           <Icon
             icon="emojione:maple-leaf"
             height="50"
             rotate={2}
             hFlip={true}
             vFlip={true}
-            style={{marginLeft:"79px"}}
+            style={{ marginLeft: "79px" }}
           />
           <Text align="center" color="#63BA86" weight={700}>
             IRUACLINIC
@@ -81,14 +80,14 @@ const Courses = () => {
           </Button>{" "}
         </div>
         <div className={cx(classes.boxPosition, classes.boxP)}>
-        <Space h="sm" />
+          <Space h="sm" />
           <Icon
             icon="emojione:maple-leaf"
             height="50"
             rotate={2}
             hFlip={true}
             vFlip={true}
-            style={{marginLeft:"79px"}}
+            style={{ marginLeft: "79px" }}
           />
           <Text align="center" color="#63BA86" weight={700}>
             IRUACLINIC
@@ -112,14 +111,14 @@ const Courses = () => {
           </Button>{" "}
         </div>
         <div className={cx(classes.boxPosition, classes.boxP)}>
-        <Space h="sm" />
+          <Space h="sm" />
           <Icon
             icon="emojione:maple-leaf"
             height="50"
             rotate={2}
             hFlip={true}
             vFlip={true}
-            style={{marginLeft:"79px"}}
+            style={{ marginLeft: "79px" }}
           />
           <Text align="center" color="#63BA86" weight={700}>
             IRUACLINIC
@@ -143,15 +142,14 @@ const Courses = () => {
           </Button>{" "}
         </div>
         <div className={cx(classes.boxPosition, classes.boxP)}>
-        <Space h="sm" />
+          <Space h="sm" />
           <Icon
             icon="emojione:maple-leaf"
-           
             height="50"
             rotate={2}
             hFlip={true}
             vFlip={true}
-            style={{marginLeft:"79px"}}
+            style={{ marginLeft: "79px" }}
           />
           <Text align="center" color="#63BA86" weight={700}>
             IRUACLINIC
@@ -175,14 +173,14 @@ const Courses = () => {
           </Button>{" "}
         </div>
         <div className={cx(classes.boxPosition, classes.boxP)}>
-        <Space h="sm" />
+          <Space h="sm" />
           <Icon
             icon="emojione:maple-leaf"
             height="50"
             rotate={2}
             hFlip={true}
             vFlip={true}
-            style={{marginLeft:"79px"}}
+            style={{ marginLeft: "79px" }}
           />
           <Text align="center" color="#63BA86" weight={700}>
             IRUACLINIC

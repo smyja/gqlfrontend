@@ -23,7 +23,6 @@ function App() {
             element={
               <PrivateRoute>
                 <DashboardShell />
-            
               </PrivateRoute>
             }
             exact
@@ -31,7 +30,7 @@ function App() {
           <Route exact path="login" element={<AuthenticationTitle />} />
           <Route exact path="signup" element={<Signup />} />
           <Route exact path="forgot-password" element={<ForgotPassword />} />
-          
+
           {/* <Route exact path="profile" element={<Profile />} /> */}
         </Routes>
       </AuthContextProvider>

@@ -16,8 +16,7 @@ import {
   Group,
   Button,
 } from "@mantine/core";
-import { Check } from "tabler-icons-react"
-
+import { Check } from "tabler-icons-react";
 
 export function AuthenticationTitle() {
   const [loading, setLoading] = useState(false);
@@ -34,7 +33,7 @@ export function AuthenticationTitle() {
       .login(username, password)
       .then((res) => {
         setLoading(false);
-        setStatus({ type: 'success' });
+        setStatus({ type: "success" });
         showNotification({
           id: "load-data",
           loading: true,
@@ -43,25 +42,25 @@ export function AuthenticationTitle() {
             "Signing in to your account, please wait while we load your data.",
           autoClose: false,
           disallowClose: true,
-        })
+        });
         setTimeout(() => {
           updateNotification({
             id: "load-data",
             loading: false,
             title: "Welcome to Relearn",
-            message: "Welcome to your account, please wait while we load your data.",
+            message:
+              "Welcome to your account, please wait while we load your data.",
             autoClose: true,
             disallowClose: false,
             icon: <Check />,
-          })
-        }
-          , 4000);
+          });
+        }, 4000);
         login(res.data.key);
         history("/dashboard");
       })
       .catch((error) => {
         setLoading(false);
-        setStatus({ type: 'error', error });
+        setStatus({ type: "error", error });
         setError(error.message || error);
       });
   }
@@ -116,7 +115,6 @@ export function AuthenticationTitle() {
               type="submit"
               loading={loading}
               disabled={loading}
-             
             >
               Sign in
             </Button>
@@ -137,11 +135,7 @@ export function AuthenticationTitle() {
             disallowClose: false,
           })}
       </>
-      <>
-        {" "}
-        
-      
-      </>
+      <> </>
     </div>
   );
 }

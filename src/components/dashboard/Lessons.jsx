@@ -1,18 +1,22 @@
 import React from "react";
-import { NavLink,useLocation } from "react-router-dom";
-
+import { Navigate, useLocation } from "react-router-dom";
 
 const Lessons = (props) => {
-  const location = useLocation(); 
+  const location = useLocation();
   const data = location.state?.title;
 
-  return (<div>
+  console.log("data", data);
+  // if data is undefined redirect to homepage
 
-    <h1>{data.title}</h1>
-    <p>{data.description}</p>
-  
-
-  </div>);
+  if (!data) {
+    return <Navigate replace to="/dashboard/courses" />;
+  } else {
+    return (
+      <div>
+        <h1>{data.title}</h1>
+        <p>{data.description}</p>
+      </div>
+    );
+  }
 };
-
 export default Lessons;

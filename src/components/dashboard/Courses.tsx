@@ -89,7 +89,7 @@ const Courses = () => {
                 vFlip={true}
                 // style={{marginLeft:"79px"}}
               />
-              <NavLink to={`${course.slug}`}>
+              <NavLink to={`${course.slug}`} state={{ title: course}}>
                 <Text weight={400} style={{ marginLeft: "10px" }}>
                   {course.title}
                 </Text>

@@ -14,7 +14,8 @@ const Lessons = (props) => {
     return (
       <div>
         <h1>{data.title}</h1>
-        <p>{data.description}</p>
+        <div style={{ whiteSpace: "pre-line" }}>  {data.description}</div>
+      
       </div>
     );
   }

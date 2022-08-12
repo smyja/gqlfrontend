@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Text, Loader } from "@mantine/core";
 import axios from "axios";
-import { useParams, Link ,useLocation} from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 
 //pass lesson data to another component
 
@@ -32,34 +32,27 @@ const LessonList = (props) => {
 
   return (
     <Container>
-    
       {loading && <Loader />}
-      <h1>  {data.title}</h1>
+      <h1> {data.title}</h1>
       <Text
-                weight={300}
-                style={{
-               
-                  fontFamily: "Lato",
-                  fontSize: "24px",
-                }}
-              >
-              Course Lessons
-              </Text>
+        weight={300}
+        style={{
+          fontFamily: "Lato",
+          fontSize: "24px",
+        }}
+      >
+        Course Lessons
+      </Text>
       {lesson?.map((lessons) => {
         return (
-         
           <div key={lessons.id}>
-
             <Link to={`${lessons.slug}`} state={{ title: lessons }}>
               {lessons.title}
             </Link>
-           
           </div>
         );
       })}{" "}
       {error && <p>{error}</p>}
-   
-        
     </Container>
   );
 };

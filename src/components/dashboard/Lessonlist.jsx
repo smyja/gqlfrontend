@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Text, Loader } from "@mantine/core";
+import { Container, Text, Loader, Paper, Space } from "@mantine/core";
 import axios from "axios";
 import { useParams, Link, useLocation } from "react-router-dom";
 
@@ -43,12 +43,26 @@ const LessonList = (props) => {
       >
         Course Lessons
       </Text>
+      <Space h="xs" />
       {lesson?.map((lessons) => {
         return (
           <div key={lessons.id}>
-            <Link to={`${lessons.slug}`} state={{ title: lessons }}>
-              {lessons.title}
-            </Link>
+            <Paper p="md" style={{ border: "1px solid #000000" }}>
+              <Link
+                to={`${lessons.slug}`}
+                state={{ title: lessons }}
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  '&:hover': {
+                    color: 'red',
+                  },
+                }}
+              >
+                {lessons.title}
+              </Link>
+            </Paper>
+            <Space h="md" />
           </div>
         );
       })}{" "}

@@ -152,7 +152,7 @@ const DashboardShell = (props) => {
                 mr="xl"
               />
             </MediaQuery>
-            <Text className={classes.header} weight={400} color="#63BA86">
+            <Text className={classes.header} weight={400} color="black">
               Hey,Nonso
             </Text>
             <Group

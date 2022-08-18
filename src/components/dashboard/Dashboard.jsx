@@ -153,7 +153,7 @@ const DashboardShell = (props) => {
               />
             </MediaQuery>
             <Text className={classes.header} weight={400} color="black">
-              Hey,Nonso
+              Welcome to relearn
             </Text>
             <Group
               direction="row"
@@ -189,7 +189,7 @@ const DashboardShell = (props) => {
                     trigger="hover"
                     control={
                       <Avatar color="cyan" radius="xl">
-                        IR
+                        Menu
                       </Avatar>
                     }
                   >

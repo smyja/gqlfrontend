@@ -14,6 +14,7 @@ import {
   Loader,
 } from "@mantine/core";
 
+
 const useStyles = createStyles(() => ({
   boxPosition: {
     "@media (max-width: 800px)": {
@@ -81,14 +82,18 @@ const Courses = () => {
               className={cx(classes.boxPosition, classes.boxP)}
             >
               <Space h="sm" />
-              <Icon
+              <div>
+    { <div dangerouslySetInnerHTML={{ __html : (course.svg) }} /> }
+  </div>
+            
+              {/* <Icon
                 icon="emojione:maple-leaf"
                 height="50"
                 rotate={2}
                 hFlip={true}
                 vFlip={true}
                 // style={{marginLeft:"79px"}}
-              />
+              /> */}
               <NavLink to={`${course.slug}`} state={{ title: course }}>
                 <Text weight={400} style={{ marginLeft: "10px" }}>
                   {course.title}

@@ -119,21 +119,7 @@ const DashboardShell = (props) => {
             >
               Profile
             </List.Item>
-            <List.Item
-              component={NavLink}
-              style={({ isActive }) => {
-                return {
-                  display: "block",
-                  margin: "1rem 0",
-                  color: "#14354E",
-                  backgroundColor: isActive ? "#8BC2A1" : "",
-                  fontWeight: isActive ? "900" : "",
-                };
-              }}
-              to="/contact"
-            >
-              mmand
-            </List.Item>
+           
           </List>
         </Navbar>
       }

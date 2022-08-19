@@ -56,7 +56,7 @@ export function AuthenticationTitle() {
           });
         }, 4000);
         login(res.data.key);
-        history("/dashboard");
+        history("/dashboard/courses");
       })
       .catch((error) => {
         setLoading(false);

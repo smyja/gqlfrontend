@@ -13,7 +13,7 @@ const lo = [
     ],
     props: {
       links: [
-        { link: "/#/learn", label: "About" },
+        { link: "/#/about", label: "About" },
         { link: "/#/login", label: "Login" },
         { link: "/#/signup", label: "Signup" },
       ],

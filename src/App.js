@@ -7,6 +7,7 @@ import { Signup } from "./components/Signup.tsx";
 import DashboardShell from "./components/dashboard/Dashboard.jsx";
 import { Routes, Route, Navigate } from "react-router-dom";
 import LessonList from "./components/dashboard/Lessonlist";
+import  About  from "./components/About.jsx";
 
 function PrivateRoute({ children }) {
   const { user } = useContext(AuthContext);
@@ -30,7 +31,7 @@ function App() {
           <Route exact path="login" element={<AuthenticationTitle />} />
           <Route exact path="signup" element={<Signup />} />
           <Route exact path="forgot-password" element={<ForgotPassword />} />
-
+          <Route exact path="about" element={<About />} />
           {/* <Route exact path="profile" element={<Profile />} /> */}
         </Routes>
       </AuthContextProvider>

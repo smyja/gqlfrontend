@@ -29,7 +29,7 @@ import{
           <Group spacing="sm">
             <Avatar size={30} src={item.avatar} radius={30} />
             <Text size="sm" weight={500}>
-              Oghenemaro Akpobi
+            Null
             </Text>
           </Group>
         </td>
@@ -39,17 +39,17 @@ import{
                     color={"blue"}
             variant={theme.colorScheme === 'dark' ? 'light' : 'outline'}
           >
-           Software Engineer
+          Null
           </Badge>
         </td>
         <td>
           <Anchor<'a'> size="sm" href="#" onClick={(event) => event.preventDefault()}>
-            papajonatus@gmail.com
+          Null
           </Anchor>
         </td>
         <td>
           <Text size="sm" color="dimmed">
-          +2349053305096
+      Null
           </Text>
         </td>
      
